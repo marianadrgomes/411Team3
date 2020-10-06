@@ -8,7 +8,7 @@ This service would help the user find something to listen to or watch. Here's ho
   1. If they choose to listen to music, they'll be prompted with a list of tasks (i.e. What are you going to do? Options: Cook, Drive, Clean, etc). This will then generate a playlist that fits the task's mood.
   2. If they choose to watch media, they'll be prompted with a list of genres/categories (i.e. Comedy, Drama, etc). Once they select a category a random TV show or movie will be generated. The user can then be prompted with options "Already watched, refresh" and "Let's watch it!". This would only work with Netflix.
   
-With the above options, we would use a DB to store and cache the result of the user's interaction with the service (i.e. the playlist and the movie/TV show watched). The APIs used here would be for Netflix and Spotify.
+With the above options, we would use a DB to store and cache the result of the user's interaction with the service (i.e. the playlist and the movie/TV show watched). The APIs used here would be for Netflix and Spotify. This service would help user's that have a hard time selecting something to watch or listen to when there are so many options.
 
 
 ### Idea Two – Spirit Music
