@@ -20,3 +20,4 @@ We’ve come up with a couple of user stories, and have decided to split them up
 ### As a logged in User that wants to listen to music
 - I would like the system to suggest music to me based on what I’m going to do – i.e. given a task (clean the house) it generates a playlist that matches that activity.
 - I would like the system to be able to match the mood outside (of the weather) – and if I choose this option, then I want to be notified and be able to accept or deny the location request to check current location’s weather.
+
