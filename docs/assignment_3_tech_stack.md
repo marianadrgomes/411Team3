@@ -2,4 +2,4 @@ We chose Node.js because it has many built in functions, and allows us to do bot
 
 We were debating between Node and Django. We ultimately chose Node because some teammates were comfortable and had experience with Javascript and the Node framework, while we had only a few members who had some experience with Django. We decided that Node would cause us less problems, since people who are already experience with Node can help those who are less experienced. Since some of us are new to group work, frameworks, and APIs, we decided to choose something familiar. 
 
-We have not chosen a database yet since we don't know the exact details of our project. We intend to look into different databases and see what would match our projectbest. 
+We have not chosen a database yet since we don't know the exact details of our project. We intend to look into different databases and see what would match our project best. 
