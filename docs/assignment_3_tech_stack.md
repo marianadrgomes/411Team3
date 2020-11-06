@@ -1,4 +1,5 @@
-We chose Node.js and (database name here)
-Why we chose node:
-- It has many built in functions, and we can do both back end and front end with it. In creating a node project, we can hit GET/POST routes to APIs and forms, and render data using a templater (PUG). We decided to choose this framework because it's easy to work with and all in one. Plus, we get access to NPM packages that we can simply install and easily use.
-- We bounced between Node and Django, but since some teammates are comfortable with the javascript language and Node framework, most of us are not well-versed in Django nor know much about it, we thought it would be best to stick to something that is more familiar to at least some of us.
+We chose Node.js because it has many built in functions, and allows us to do both back-end and front-end. Creating a Node project allows us to hit GET/POST routes to APIs and forms, and render data using a templater (PUG). This framework is easy to work with, which is an aspect we wanted since some of us do not have a lot of experience working with frameworks. Additionally, we get access to NPM packages that we can easily install and use. 
+
+We were debating between Node and Django. We ultimately chose Node because some teammates were comfortable and had experience with Javascript and the Node framework, while we had only a few members who had some experience with Django. We decided that Node would cause us less problems, since people who are already experience with Node can help those who are less experienced. Since some of us are new to group work, frameworks, and APIs, we decided to choose something familiar. 
+
+We have not chosen a database yet since we don't know the exact details of our project. We intend to look into different databases and see what would match our projectbest. 
