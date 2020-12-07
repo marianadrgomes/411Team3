@@ -26,6 +26,11 @@ block content
     p The weather conditions are:
     p #{data.weather[0].main} – #{data.weather[0].description}
 
+  if showPlayList
+    h1 This is the playlist we found for you based on the weather at your location:
+    p name of playlist: #{playListData.playList_name}
+    p Here's the <a href=#{playListData.playList_url}>link</a> to the playlist
+
   // Renders when there has been an error in querying for the data entered in the form
   if showError
     h1 That's an invalid city name or zip code, please try again.

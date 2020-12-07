@@ -18,6 +18,8 @@ let geolocation;
 // Variable that will contain the spotify access token that will be used as a parameter for spotify API calls
 let accessToken;
 
+const LOGIC = require('../weather_to_mood/logic');
+
 /* GET home page. */
 // Making a call to the API that gets the user's geolocation, the cleanReturnValue is the json formatting of the api call.
 // Setting values for 'geolocation' object – grabs the user's zip code and country code (2 digit country code – i.e. 'US') to render in .POST if user allows gps tracking.
@@ -56,8 +58,10 @@ router.post('/',async (req, res, next) => {
     }
 
     // making API call to spotify to retrieve playlist
-    const getPlayList = async () => {
-        const response = await fetch(playlistConfig.url + "?q=" + "sad" + "&type=playlist", { // mood is currently hardcoded, need to change later
+    const getPlayList = async (id) => {
+        var mood = LOGIC.return_rd_mood(id);
+        //console.log(mood);
+        const response = await fetch(playlistConfig.url + "?q=" + mood + "&type=playlist", { // mood is currently hardcoded, need to change later
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -86,40 +90,49 @@ router.post('/',async (req, res, next) => {
         .then(returnedData => {
             // Object that holds all desired data from the API call to be rendered in the template (view).
             // To see what the API call returns fully, run: console.log(returnedData);
+            //console.log(returnedData.weather[0].id);
             const data = {
                 city: returnedData.name,
                 weather: returnedData.weather,
+                weather_id: returnedData.weather[0].id,
                 actualTemp: returnedData.main.temp,
                 feelsLikeTemp: returnedData.main.feels_like,
             };
 
-            // Any variables passed into `res.render` can be accessed in the template (view) – index.pug in this case.
-            res.render('index', {
-                title: "Today's weather",             // Title to be rendered on the page
-                data,                                 // data object from above – this is short-hand for data: data
-                showResult: location ? true : false,  // Acts as a 'flag' – will only show results on the page when form is submitted with data.
-            });
+            // performing API call to get access token
+            getAccessToken()
+                .then(returnedData => {
+                    // once we got the access token, call the search API to retrieve the playlist
+                    accessToken = returnedData.access_token;
+                    getPlayList(data.weather_id).then(returnedData => {
+                        const playListData = {
+                            playList_name: returnedData.playlists.items[0].name,
+                            playList_url: returnedData.playlists.items[0].external_urls.spotify
+                        }
+
+                        // Any variables passed into `res.render` can be accessed in the template (view) – index.pug in this case.
+                        res.render('index', {
+                            title: "Today's weather",             // Title to be rendered on the page
+                            data,                                 // data object from above – this is short-hand for data: data
+                            playListData,
+                            showPlayList: returnedData.playlists.items.length > 0, // if the response contains at least one playlist, display the result
+                            showResult: location ? true : false,  // Acts as a 'flag' – will only show results on the page when form is submitted with data.
+                        });
+
+                    })
+                        .catch(error => {
+                            res.render('index', { title: "Today's weather", errorMessage: error.message, showError: true });
+                        })
+                })
+                .catch(error => {
+                    res.render('index', { title: "Today's weather", errorMessage: error.message, showError: true });
+                });
         })
         // When there's an error it will be caught here and rendered in the view (index.pug) since showError is true.
         .catch(error => {
             res.render('index', { title: "Today's weather", errorMessage: error.message, showError: true });
         });
 
-    // performing API call to get access token
-    getAccessToken()
-        .then(returnedData => {
-            // once we got the access token, call the search API to retrieve the playlist
-            accessToken = returnedData.access_token;
-            getPlayList().then(returnedData => {
-                // var object = JSON.parse(returnedData.playlists.items[0]);
-                console.log(returnedData.playlists.items[0]);
-            })
-                .catch(error => {
-                    console.log('error');
-                })
-        })
-        .catch(error => {
-            console.log('error');
-        });
+
 });
 module.exports = router;
