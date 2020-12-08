@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a992bdc-7677-42ce-b3e6-fe1deb18ce2b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../prototype/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +47,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="14.9.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.14.6" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.19.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.19.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -69,6 +70,8 @@
       <option name="presentableId" value="Default" />
       <updated>1604166932564</updated>
       <workItem from="1604166933716" duration="21349000" />
+      <workItem from="1605150958698" duration="1512000" />
+      <workItem from="1605932907959" duration="20000" />
     </task>
     <servers />
   </component>
@@ -85,6 +88,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="974" y="345" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604167321297">
@@ -95,6 +99,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="578" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1604283140230" />
+    <state x="2052" y="214" key="EditFileWatcherDialog" timestamp="1605151318885">
+      <screen x="1440" y="-111" width="1920" height="1080" />
+    </state>
+    <state x="2052" y="214" key="EditFileWatcherDialog/0.0.1440.900/1440.-111.1920.1080@1440.-111.1920.1080" timestamp="1605151318885" />
     <state width="819" height="196" key="GridCell.Tab.0.bottom" timestamp="1604283806001">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
