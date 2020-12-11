@@ -46,7 +46,7 @@ module.exports = {get_rd_int, return_rd_mood}
 /* This method returns a single string which represents a mood.
 This is based on the assumption that the call on spotify api accepts string keywords.
 It requires no parameter (this can easily be changed) and fetches the id data from the const data
-defined in the file index.js. Based on the id returned, it roughly divides the weather in 7 categories
+defined in the file welcome.js. Based on the id returned, it roughly divides the weather in 7 categories
 and returns a randomly chosen mood from the corresponding weather's array of moods (hence the array name
 psb_mood for possible moods). I added this randomness just so there could be some fun and less repeating outputs.
 Feel free to add or change moods to each array, im also ok if we want to subdivide the weather categories
