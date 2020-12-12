@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    h1 Welcome to Media Roulette
+
+    // Button to go to sign in page
+    form(name="sign-in", action="/welcome/signIn", method="GET")
+        div.input
+            input(type="submit", value="Sign In")
+
+    // Button to go to sign up page
+    form(name="sign-up", action="/welcome/signUp", method="GET")
+        div.input
+            input(type="submit", value="Sign Up")
+
+    // Button to twitter sign-in page
+    form(name="sign-in-with-twitter", action='/welcome/auth', method="GET")
+        div.input
+            input(type="submit", name="twitter_sign_in", value="Sign in with twitter")

@@ -1,0 +1,83 @@
+extends layout
+
+block content
+    h1 Welcome home, #{data[0].firstName}!
+
+    // Generate playlist based on weather and conditionally show/hide the div with a button click
+    h1 Want to generate a new playlist?
+    button(id="generate-playlist") +
+    script.
+        document.getElementById("generate-playlist").onclick = function () {
+            let content = document.getElementById("get-weather-data");
+            let btn = document.getElementById("generate-playlist");
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                btn.innerHTML = "-";
+            } else {
+                content.style.display = "none";
+                btn.innerHTML = "+";
+            }
+        }
+    div.get-weather-data(id="get-weather-data")
+        form(name="get-data", method="POST")
+            div.input
+                span.label Want us to use your GPS coordinates?
+                input(type="submit", name="use_gps", value="Yes, access my location")
+            if data[0].signed_in_with_twitter === false
+                div
+                    h2 OR use your stored location
+                    input(type="submit", name="stored_location", value="Use Stored Location")
+
+
+    // Render spotify playlists and conditionally show/hide the div with a button click
+    h1 Check out the playlists you've heard before below
+    button(id="show-playlists") +
+        script.
+            document.getElementById("show-playlists").onclick = async function () {
+                let content = document.getElementById("get-spotify-data");
+                let btn = document.getElementById("show-playlists");
+                if (content.style.display === "none") {
+                    content.style.display = "block";
+                    btn.innerHTML = "-";
+                } else {
+                    content.style.display = "none";
+                    btn.innerHTML = "+";
+                }
+            }
+    div.get-spotify-data(id="get-spotify-data")
+        ul
+            if data[0].signed_in_with_twitter === false
+                for content in data[0].spotifyData
+                    p Playlist Name #{content.name}
+                    p Playlist Url #{content.url}
+                    p Playlist Image #{content.image}
+                    p _____________________________
+            else
+                h2 If you want us to store your playlist record, please sign up an account on our website.
+
+
+
+
+
+    // Rendering results and showing button that is able to hide it once it's rendered
+    div.get-results(id="get-results")
+        if showResult
+            button(id="hide-results") hide
+            script.
+                document.getElementById("hide-results").onclick = function () {
+                    document.getElementById("get-results").style.display = "none";
+                }
+            h1 Here's the data for your request:
+
+            p It is currently #{weatherData.actualTemp} degrees in #{weatherData.city}.
+
+        if showPlayList
+            h1 We think this is the perfect playlist for you based on your local weather:
+            p name of playlist: #{playListData.name}
+            p Here's the <a href=#{playListData.url}>link</a> to the playlist
+            img(src=playListData.image)
+
+        // Renders when there has been an error in querying for the data entered in the form
+        if showError
+            h1 Whoops, looks like there was an error.
+            p Error message: #{errorMessage}

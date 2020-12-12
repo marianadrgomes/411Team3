@@ -1,0 +1,42 @@
+extends layout
+
+block content
+    h1 Sign Up!
+    h3 Enter your data below
+    form(name="sign-up", action="/welcome/signUp", method="POST")
+        div.input
+            span.label First Name
+            input(type="text", name="firstName")
+        div.input
+            span.label Last Name
+            input(type="text", name="lastName")
+        div.input
+            span.label Address Line
+            input(type="text", name="addressLine")
+        div.input
+            span.label City
+            input(type="text", name="city")
+        div.input
+            span.label State
+            input(type="text", name="state")
+        div.input
+            span.label Zip Code
+            input(type="text", name="zipCode")
+        div.input
+            span.label Email Address
+            input(type="text", name="email")
+        div.input
+            span.label Password
+            input(type="text", name="password")
+        div.input
+            input(type="submit", value="submit")
+
+    // Since there are multiple fields in the sign up form, we can show either a list of errors (hence the for loop) or just a single error
+    if renderError
+        if errorCount > 1
+            ul
+                for e in error
+                    p= e
+        else
+            p= error
+

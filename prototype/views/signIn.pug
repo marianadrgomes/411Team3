@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1 Sign in!
+    h3 Enter your data below
+    form(name="sign-in", action="/welcome/signIn", method="POST")
+        div.input
+            span.label Email Address
+            input(type="text", name="email")
+        div.input
+            span.label Password
+            input(type="text", name="password")
+        div.input
+            input(type="submit", value="submit")
+
+    if renderError
+        p=error
