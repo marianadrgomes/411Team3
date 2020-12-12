@@ -13,4 +13,7 @@ block content
         div.input
             input(type="submit", value="Sign Up")
 
-    // This is where the twitter button should go \/
+    // Button to twitter sign-in page
+    form(name="sign-in-with-twitter", action='/welcome/auth', method="GET")
+        div.input
+            input(type="submit", name="twitter_sign_in", value="Sign in with twitter")

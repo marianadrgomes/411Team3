@@ -38,9 +38,16 @@ router.get('/',  async (req, res, next) => {
         countryCode: cleanReturnValue.country_code,
     };
 
-    // Getting stuff from DB based on email
-    let mongo = await db.getDB('411');
-    results = await mongo.collection('users').find({ email: userDataFromWelcomePage.email }).toArray();
+    if (userDataFromWelcomePage.signed_in_with_twitter) {
+        results = [userDataFromWelcomePage];
+    }
+    else {
+        // Getting stuff from DB based on email
+        let mongo = await db.getDB('411');
+        results = await mongo.collection('users').find({ email: userDataFromWelcomePage.email }).toArray();
+        results[0].signed_in_with_twitter = false;
+    }
+
 
     // Rendering to home.pug template
     res.render("home", { data: results });
@@ -124,13 +131,16 @@ router.post('/', async (req, res, next) => {
                             image: returnedPlaylistData.playlists.items[0].images[0].url,
                         }
 
-                        // Loading the database with spotify data
-                        loadDbWithSpotifyPlaylist(
-                            results[0].email,
-                            playListData.name,
-                            playListData.url,
-                            playListData.image
-                        );
+                        if (!results[0].signed_in_with_twitter) {
+                            // Loading the database with spotify data
+                            loadDbWithSpotifyPlaylist(
+                                results[0].email,
+                                playListData.name,
+                                playListData.url,
+                                playListData.image
+                            );
+                        }
+
 
                          // Rendering to home.pug template
                         res.render('home', {

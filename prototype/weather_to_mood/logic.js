@@ -5,8 +5,7 @@ function get_rd_int(range){//random int generator from 0 inclusive to range excl
 
 function return_rd_mood(id){
 
-  //testing code:
-  //let id = test
+
   /* The api for weather returns an id for each type of weather
   the weather condition can be roughly divided by the hundredth digit of the id
   here I assume the id to be the number type.
@@ -42,7 +41,6 @@ function return_rd_mood(id){
   }
 }
 
-module.exports = {get_rd_int, return_rd_mood}
 /* This method returns a single string which represents a mood.
 This is based on the assumption that the call on spotify api accepts string keywords.
 It requires no parameter (this can easily be changed) and fetches the id data from the const data
@@ -52,3 +50,6 @@ psb_mood for possible moods). I added this randomness just so there could be som
 Feel free to add or change moods to each array, im also ok if we want to subdivide the weather categories
 to be more specific.
 */
+
+module.exports = {get_rd_int, return_rd_mood}
+
