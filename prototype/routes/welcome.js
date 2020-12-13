@@ -1,3 +1,4 @@
+//Author: Mariana Gomes, Zeyu Gu
 const express = require('express');
 const router = express.Router();
 const db = require('../mongoConnection');

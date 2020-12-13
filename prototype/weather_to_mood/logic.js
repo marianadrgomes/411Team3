@@ -1,3 +1,4 @@
+//Author: Jiarui Fu
 //Methods for converting weather to mood
 function get_rd_int(range){//random int generator from 0 inclusive to range exclusive
   return Math.floor(Math.random() * Math.floor(range));

@@ -1,0 +1,20 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+input {
+    margin: 8px;
+    padding: 5px;
+}
+
+div.get-weather-data { display: none; }
+div.get-spotify-data { display: none; }
+div.get-results {
+    margin: 75px;
+    display: block;
+}
