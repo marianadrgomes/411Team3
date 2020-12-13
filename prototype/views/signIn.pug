@@ -20,3 +20,5 @@ head
         .submit
           input(type='submit' value='Submit')
       img#signin-pic(src='/signin-pic.svg' alt='')
+if renderError
+    p=error
