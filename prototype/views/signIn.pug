@@ -1,17 +1,38 @@
-extends layout
+//- extends layout
 
-block content
-    h1 Sign in!
-    h3 Enter your data below
-    form(name="sign-in", action="/welcome/signIn", method="POST")
-        div.input
-            span.label Email Address
-            input(type="text", name="email")
-        div.input
-            span.label Password
-            input(type="text", name="password")
-        div.input
-            input(type="submit", value="submit")
+//- block content
+//-     h1 Sign in!
+//-     h3 Enter your data below
+//-     form(name="sign-in", action="/welcome/signIn", method="POST")
+//-         div.input
+//-             span.label Email Address
+//-             input(type="text", name="email")
+//-         div.input
+//-             span.label Password
+//-             input(type="text", name="password")
+//-         div.input
+//-             input(type="submit", value="submit")
 
-    if renderError
-        p=error
+//-     if renderError
+//-         p=error
+head
+    meta(charset='utf-8')
+    title Sign In
+    link(rel='stylesheet' href='/stylesheets/style.css')
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap' rel='stylesheet')
+.main-body
+  h1 Media Roulette
+  .signin-body
+    .signin-text
+      h1 Sign In
+      form(name='sign-in' action='/welcome/signIn' method='POST')
+        .email
+          span.label Email Address
+          input(type='text' name='email')
+        .password
+          span.label Password
+          input(type='password' name='password')
+        .submit
+          input(type='submit' value='Submit')
+      img#signin-pic(src='/signin-pic.svg' alt='')

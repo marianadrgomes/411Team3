@@ -1,19 +1,70 @@
-extends layout
+//- extends layout
 
-block content
-    h1 Welcome to Media Roulette
+//- block content
+//-     h1 Welcome to Media Roulette
 
-    // Button to go to sign in page
-    form(name="sign-in", action="/welcome/signIn", method="GET")
-        div.input
-            input(type="submit", value="Sign In")
+//-     // Button to go to sign in page
+//-     form(name="sign-in", action="/welcome/signIn", method="GET")
+//-         div.input
+//-             input(type="submit", value="Sign In")
 
-    // Button to go to sign up page
-    form(name="sign-up", action="/welcome/signUp", method="GET")
-        div.input
-            input(type="submit", value="Sign Up")
+    //- // Button to go to sign up page
+    //- form(name="sign-up", action="/welcome/signUp", method="GET")
+    //-     div.input
+    //-         input(type="submit", value="Sign Up")
 
-    // Button to twitter sign-in page
-    form(name="sign-in-with-twitter", action='/welcome/auth', method="GET")
-        div.input
-            input(type="submit", name="twitter_sign_in", value="Sign in with twitter")
+//-     // Button to twitter sign-in page
+//-     form(name="sign-in-with-twitter", action='/welcome/auth', method="GET")
+//-         div.input
+//-             input(type="submit", name="twitter_sign_in", value="Sign in with twitter")
+
+
+//- doctype html
+head
+    meta(charset='utf-8')
+    title Welcome
+    link(rel='stylesheet' href='stylesheets/style.css')
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap' rel='stylesheet')
+
+.main-body
+    h1 Media Roulette
+    //
+      <form name="get-data" action="/auth/twitter" method="GET">
+      <div class="input">
+      <input type="submit" name="twitter_sign_in" value="Sign in with Twitter"/>
+      </div>
+      </form>
+    .main-info
+        h2#main-info-text
+            | No day is ever
+            br
+            |  boring with
+            br
+            |  Media Roulette
+        // Sign up
+        form(name="sign-up", action="/welcome/signUp", method="GET")
+            .signupbutton   
+                input(type="submit", value="Sign Up")
+        // Sign In
+        form(name="sign-in", action="/welcome/signIn", method="GET")
+            .signinbutton   
+                input(type="submit", value="Sign In")
+        // Twitter
+        form(name="sign-in-with-twitter", action='/welcome/auth', method="GET")
+            .twitterbutton
+                input(type="submit", name="twitter_sign_in", value="Sign in with twitter")
+        img#img1(src='/undraw_celebration_0jvk.svg' alt='')
+    .video
+        img#img2(src='/undraw_online_media_62jb.svg' alt='')
+        h2
+            | A video for
+            br
+            |  every moment
+    .music
+        h2
+            | A playlist for
+            br
+            |  every mood
+        img#img3(src='/undraw_compose_music_ovo2.svg' alt='')
+

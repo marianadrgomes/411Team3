@@ -16,6 +16,8 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+app.use(express.static('./views/images'));
+
 app.use(session({secret: '156234', resave: false, saveUninitialized: true}));
 app.use(logger('dev'));
 app.use(express.json());

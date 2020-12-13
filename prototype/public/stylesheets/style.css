@@ -1,4 +1,4 @@
-body {
+/* body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
@@ -17,4 +17,272 @@ div.get-spotify-data { display: none; }
 div.get-results {
     margin: 75px;
     display: block;
+} */
+
+.main-body {
+  padding-left: 150px;
+  padding-top: 40px;
+  padding-right: 150px;
+  font-family: 'Roboto';
+}
+
+h1 {
+  display: inline-block;
+}
+
+#main-info-text {
+  font-size: 40px;
+  margin-left: 60px;
+  padding-top: 70px;
+}
+
+.twitterbutton input {
+  background-color: #5EC0CA;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+}
+
+.signupbutton input {
+  background-color: #CE8F5A;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+}
+
+.signinbutton input {
+  background-color: #80C8BC;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+}
+
+form {
+  margin-left: 60px;
+  margin-top: -10px;
+}
+
+.address {
+  padding-bottom: 40px;
+}
+
+.address input {
+  float: right;
+}
+
+.address span {
+  float: left;
+}
+
+.city {
+  padding-bottom: 40px;
+}
+
+.city input {
+  float: right;
+}
+
+.city span {
+  float: left;
+}
+
+.email {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.email input{
+  margin-left: 30px; 
+}
+
+.email1 {
+  padding-bottom: 40px;
+}
+
+.email1 input {
+  float: right;
+}
+
+.email1 span{
+  float: left;
+}
+
+.fname {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.fname input {
+  float: right;
+}
+
+.fname span {
+  float: left;
+}
+
+.lname {
+  padding-bottom: 40px;
+}
+
+.lname input {
+
+  float: right;
+}
+
+.lname span {
+  float: left;
+}
+
+.main-info {
+  width: 100%;
+  height: 500px;
+  background-color: #EFD199;
+  border-radius: 4px;
+  margin-top: 100px;
+}
+
+.music {
+  margin-top: 200px;
+  border: 1px solid white;
+}
+
+.music h2 {
+  margin-top: 200px;
+  font-size: 40px;
+  margin-left: 150px;
+  color: #5EC0CA;
+}
+
+.password {
+  padding-bottom: 40px;
+}
+
+.password1 {
+  padding-bottom: 40px;
+}
+
+.password1 input {
+  float: right;
+}
+
+.password1 span {
+  float: left;
+}
+
+.password input{
+  margin-left: 60px;
+}
+
+.signin-body {
+  background-color: #EFD199;
+  border-radius: 4px;
+  text-align: center;
+  height: 400px;
+}
+
+.signin-text {
+  margin-left: 300px;
+}
+
+.signup-body {
+  background-color: #5EC0CA;
+  border-radius: 4px;
+  height: 550px;
+  text-align: center;
+}
+
+.signup-text {
+  width: 350px;
+  height: 400px;
+  /* border: 1px black solid; */
+
+}
+
+.state {
+  padding-bottom: 40px;
+}
+
+.state input {
+  float: right;
+}
+
+.state span {
+  float: left;
+}
+
+.submit input{
+  background-color: #5EC0CA;
+  border-radius: 4px;
+  color: white;
+  font-size: 30px;
+  width: 290px;
+  height: 70px;
+}
+
+.submit1 input {
+  background-color: #EFD199;
+  border-radius: 4px;
+  font-size: 30px;
+  width: 290px;
+  height: 70px;
+}
+
+.video {
+  padding-top: 40px;
+}
+
+.video h2 {
+  font-size: 40px;
+  margin-top: -300px;
+  margin-left: 800px;
+  color: #80C8BC;
+}
+
+.zip {
+  padding-bottom: 40px;
+}
+
+.zip input {
+  float: right;
+}
+
+.zip span {
+  float: left;
+}
+
+#img1 {
+  width: 50%;
+  height: 100%;
+  margin-left: 500px;
+  margin-top: -400px;
+}
+
+#img2 {
+  width: 50%;
+}
+
+#img3 {
+  width: 50%;
+  margin-left: 600px;
+  margin-top: -300px;
+}
+
+#signin-pic {
+  width: 500px;
+  height: 500px;
+  margin-top: -350px;
+  margin-left: -800px;
+}
+
+#signup-pic {
+  width: 500px;
+  height: 500px;
+  margin-top: -450px;
+  margin-left: 450px;
 }
