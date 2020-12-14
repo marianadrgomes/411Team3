@@ -1,6 +1,6 @@
 # 411 Team 3
 A repository to hold our team's assignments
-Participants: Alex Feng, Jiarui Fu, Julie Ha, Mariana Gomes, Siddarth, Zeyu Gu.
+Participants: Alex Feng, Jiarui Fu, Julie Ha, Mariana Gomes, Siddarth Gumireddy, Zeyu Gu.
 
 ### Overview of app and tech-stack used
 This application allows a user to create an account and generate a spotify playlist based on the weather in the user's location. There are two ways to do this, either the user decides to generate a playlist based on the city stored in their profile, or wherever they are in the globe. Perhaps the user is in New York but their account has Boston stored, they could generate a playlist for either location's weather. Once a playlist is generated it is automatically stored in the database under the user's account, and all playlists generated for the user is displayed under a collapsible tab on the home page.
