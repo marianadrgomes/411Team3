@@ -15,6 +15,35 @@ input {
 div.get-weather-data { display: none; }
 div.get-spotify-data { display: none; }
 div.get-results {
-    margin: 75px;
+    margin: 50px;
     display: block;
+}
+
+span.text {
+    font: 28px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 8px;
+    padding: 5px;
+}
+
+button.toggle {
+    font: 28px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 8px;
+}
+
+div.get-weather-data {
+    font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 8px;
+    padding: 5px;
+}
+
+span.get-weather-data-text {
+    font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 8px;
+    padding: 5px;
+}
+
+div.display-spotify-data { display: flex; }
+img.playlist {
+    width: 65%;
+    padding: 15px;
 }

@@ -79,7 +79,8 @@ form {
 }
 
 .email input{
-  margin-left: 30px; 
+  margin-left: 30px;
+  height: 30px;
 }
 
 .email1 {
@@ -158,6 +159,7 @@ form {
 
 .password input{
   margin-left: 60px;
+  height: 30px;
 }
 
 .signin-body {
